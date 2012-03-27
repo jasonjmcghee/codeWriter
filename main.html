@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Code Writer</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+<script src="js/autoresize.jquery.min.js"></script>
+<script language="javascript">
+	function myfunction(){
+		var text = document.myform.codeBox.value;
+		if(text == 'hello'){
+			document.myform.codeBox.value = 'howdy!';	
+		} else{
+			document.myform.codeBox.value = 'way to say hello...';	
+		}
+	}
+</script>
+<script>
+	$(function(){
+		$('#codeBox').autoResize();
+    });
+</script>
+<style type="text/css">
+	textarea#codeBox {
+		border: 1px solid #1c86ee;
+		padding: 4px;
+		font-family: Tahoma, sans-serif;
+	}
+</style>
+
+</head>
+<body>
+	<form name='myform'>
+	<textarea name="codeBox" id="codeBox" cols="40" rows="1" type="text"></textarea>
+	</br>
+		<input type="button" onclick="myfunction()" value="Analyze">
+	</form>
+</body>
+</html>
